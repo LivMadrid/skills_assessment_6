@@ -1,0 +1,73 @@
+Runtime
+-------
+
+1. Runtime for does_string_contain_letter:
+
+O(n) becasue we are searching letter in a list. 
+
+2. Runtime for duplicate_letters:
+
+O(n^2)  nested for loops (hidden for loops)
+
+3. Runtime for duplicate_letters2:
+
+O(n) 
+
+Stacks and Queues
+-----------------
+
+
+1. Which would be a better data structure for creating a Stack: a Linked List or 
+   a built-in Python list? Explain why, referencing the runtime requirements for
+   Stack operations (push, pop, etc).
+
+A linked list would be a better option for creating a stack because it references the next entry in a list (or both previous/next in DLL). 
+Appending or popping (O(1) runtime) an entry only requires setting the reference point 
+to the current top of stack. Although this way of creating a list may take longer to get items by index
+it faster than a python list with contiguous memory (especially for a very loooooooooooonnnnnnnngggg list)
+
+
+
+2. Which would be a better data structure for creating a Queue: a Linked List or
+   a built-in Python list? Explain why, referencing the runtime requirements for
+   Queue methods (enqueue, dequeue, etc).
+   Using a Queue class and a doubly-linked list to hold the data because adding new things (enqueue) to the
+   end of a doubly linked list is runtime O(1) and (dequeue)removing items from beginning of list is also o(1)
+   or constant time while running a Python list is O(n) to remove an item from beginning of list and 
+   O(1) to add an itme at the end of a list. 
+
+
+
+Trees
+-----
+
+1. Using the diagram in the instructions, in what order would a Breadth First
+   Search (BFS) algorithm visit each node  until finding burritos (starting at
+   food)?
+
+   For BFS we would use a queue which are FIFO so: 
+   start:
+   Food (no) -> add children italian, indian, mexican -> not those so add children (lasagna(no), 
+   pizza(no), tikka masala(no), saag (no), burritos (YES!) 
+
+
+2. Using the diagram in the instructions, In what order would a Depth First 
+   Search (DFS) algorithm visit each node until finding Chicago-style (starting
+   at food)? 
+
+   Since stacks are LIFO we would want to use them in this DFS situation. (assuming it is pushed in 
+   left to right order (so the top is the right side ending with mexican food)and I am not having a dyslexia moment: Food { Italain: lasgana {}, pizza {}, Indian: tikka masala, saag, Mexican: burritos, tacos, echiladas}
+   So the order (LIFO) is: 
+
+food -> mexican -> burritos (no), -> tacos (no), -> enchiladas (no) , now to Indian (no) -> saag (no) -> tikka masala (no)
+-> italian (no) -> pizza (no) -> sicilian (no) -> new york style (no), -> chicago style (YES!)
+
+
+
+3. How is a binary search tree different from other trees?
+
+
+Binary search trees have a left and right child (need to be balanced) and have a "rule" for 
+arrangement (used for fast searching O (log n) )
+
+
